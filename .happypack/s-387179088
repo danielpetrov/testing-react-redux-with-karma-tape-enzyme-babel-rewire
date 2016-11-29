@@ -1,0 +1,14 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var isProduction = exports.isProduction = function isProduction() {
+  return process.env.NODE_ENV === 'production';
+};
+var isDevelopment = exports.isDevelopment = function isDevelopment() {
+  return process.env.NODE_ENV === 'development';
+};
+var isTesting = exports.isTesting = function isTesting() {
+  return process.env.NODE_ENV === 'test';
+};

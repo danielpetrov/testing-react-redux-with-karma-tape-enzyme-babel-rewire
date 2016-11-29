@@ -1,0 +1,23 @@
+html, body, #app {
+    height: 100%;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+    color: white;
+    background-color: white;
+    padding-top: 30px;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+}

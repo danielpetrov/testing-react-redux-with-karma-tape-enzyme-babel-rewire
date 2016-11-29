@@ -1,0 +1,129 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.createRoot = exports.configureStoreWithBrowserHistory = undefined;
+
+var _index = require('/home/danielpetrov/Public/Work/testing/node_modules/redbox-react/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = require('/home/danielpetrov/Public/Work/testing/node_modules/react-transform-catch-errors/lib/index.js');
+
+var _index4 = _interopRequireDefault(_index3);
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index5 = require('/home/danielpetrov/Public/Work/testing/node_modules/react-transform-hmr/lib/index.js');
+
+var _index6 = _interopRequireDefault(_index5);
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _reactDom = require('react-dom');
+
+var _reactRouter = require('react-router');
+
+var _reactRedux = require('react-redux');
+
+var _reactRouterRedux = require('react-router-redux');
+
+var _createStore = require('../store/createStore');
+
+var _createStore2 = _interopRequireDefault(_createStore);
+
+var _containers = require('../containers');
+
+var _getLink = require('../utils/getLink');
+
+var _getLink2 = _interopRequireDefault(_getLink);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+    Root: {
+        displayName: 'Root',
+        isInFunction: true
+    }
+};
+
+var _homeDanielpetrovPublicWorkTestingNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
+    filename: '/home/danielpetrov/Public/Work/testing/app/js/components/Root.js',
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+});
+
+var _homeDanielpetrovPublicWorkTestingNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
+    filename: '/home/danielpetrov/Public/Work/testing/app/js/components/Root.js',
+    components: _components,
+    locals: [],
+    imports: [_react3.default, _index2.default]
+});
+
+function _wrapComponent(id) {
+    return function (Component) {
+        return _homeDanielpetrovPublicWorkTestingNode_modulesReactTransformHmrLibIndexJs2(_homeDanielpetrovPublicWorkTestingNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+    };
+}
+
+var configureStoreWithBrowserHistory = exports.configureStoreWithBrowserHistory = function configureStoreWithBrowserHistory() {
+    var store = (0, _createStore2.default)();
+
+    (0, _reactRouterRedux.syncHistoryWithStore)(_reactRouter.browserHistory, store);
+
+    return store;
+};
+
+var defaultStore = configureStoreWithBrowserHistory();
+
+var createRoot = exports.createRoot = function createRoot() {
+    var store = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultStore;
+    var name = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'Root';
+
+    var Root = _wrapComponent('Root')(function (_Component) {
+        _inherits(Root, _Component);
+
+        function Root() {
+            _classCallCheck(this, Root);
+
+            return _possibleConstructorReturn(this, (Root.__proto__ || Object.getPrototypeOf(Root)).apply(this, arguments));
+        }
+
+        _createClass(Root, [{
+            key: 'render',
+            value: function render() {
+                return _react3.default.createElement(
+                    _reactRedux.Provider,
+                    { store: store },
+                    _react3.default.createElement(
+                        _reactRouter.Router,
+                        { history: _reactRouter.browserHistory },
+                        _react3.default.createElement(
+                            _reactRouter.Route,
+                            { path: (0, _getLink2.default)(''), component: _containers.App },
+                            _react3.default.createElement(_reactRouter.IndexRedirect, { to: (0, _getLink2.default)('home') }),
+                            _react3.default.createElement(_reactRouter.Route, { path: (0, _getLink2.default)('home'), component: _containers.HomePageContainer }),
+                            _react3.default.createElement(_reactRouter.Route, { path: (0, _getLink2.default)('todos'), component: _containers.TodosContainer })
+                        )
+                    )
+                );
+            }
+        }]);
+
+        return Root;
+    }(_react2.Component));
+
+    Root.displayName = name;
+
+    return Root;
+};

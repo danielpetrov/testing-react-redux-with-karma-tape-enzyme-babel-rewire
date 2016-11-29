@@ -16,7 +16,7 @@ class TopNavigationContainer extends Component {
                     <div className="container-fluid">
                         <div className="navbar-header">
                             <Link to={getLink('home')} className="navbar-brand">
-                                <span>'Home'</span>
+                                <span>Home</span>
                             </Link>
                         </div>
                         <TopNavigationLinks {...{ currentPathname }} />

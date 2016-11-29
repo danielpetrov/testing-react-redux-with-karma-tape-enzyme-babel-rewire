@@ -11,7 +11,7 @@ export default class TopNavigationLinks extends Component {
                 <NavigationLink
                     isActive={currentPathname.startsWith(getLink('todos'))}
                     linkTo={getLink('todos')}
-                    title={getLink('todos')}
+                    title={'Todos'}
                 />
             </ul>
         )

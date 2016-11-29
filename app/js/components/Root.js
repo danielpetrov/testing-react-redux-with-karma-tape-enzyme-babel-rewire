@@ -27,6 +27,7 @@ export const createRoot = (store = defaultStore, name = 'Root') => {
                             <IndexRedirect to={getLink('home')} />
                             <Route path={getLink('home')} component={HomePageContainer} />
                             <Route path={getLink('todos')} component={TodosContainer} />
+                            <Route path='*' component={HomePageContainer} />
                         </Route>
                     </Router>
                 </Provider>

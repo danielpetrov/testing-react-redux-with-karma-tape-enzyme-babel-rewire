@@ -2,6 +2,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { createRoot } from './components/Root'
+import 'bootstrap-css'
 import '../css/index.css'
 
 const RootComponent = createRoot()

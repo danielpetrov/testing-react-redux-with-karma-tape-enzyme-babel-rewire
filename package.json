@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/danielpetrov/testing-react-redux-with-karma-tape-enzyme-babel-rewire"
   },
   "keywords": [
     "react",
@@ -65,6 +65,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.15.3",
+    "bootstrap-css": "^3.0.0",
     "classnames": "^2.2.5",
     "immutable": "^3.8.1",
     "ramda": "^0.22.1",

@@ -1,1 +1,0 @@
-{"version":3,"sources":["app/js/constants/loading.js"],"names":["START_LOADING","STOP_LOADING"],"mappings":";;;;;AAAO,IAAMA,wCAAgB,eAAtB;AACA,IAAMC,sCAAe,cAArB","file":"loading.js","sourceRoot":"/home/danielpetrov/Public/Work/testing","sourcesContent":["export const START_LOADING = 'START_LOADING'\nexport const STOP_LOADING = 'STOP_LOADING'\n"]}

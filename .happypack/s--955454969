@@ -1,7 +1,0 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var START_LOADING = exports.START_LOADING = 'START_LOADING';
-var STOP_LOADING = exports.STOP_LOADING = 'STOP_LOADING';
